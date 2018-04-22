@@ -1,0 +1,82 @@
+{
+	"variables": [],
+	"info": {
+		"name": "mongo-express-node",
+		"_postman_id": "654df7a1-bb26-dd3e-61e2-5bc55fe28c7c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list-user",
+			"request": {
+				"url": "localhost:8081/listUsers",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add-user",
+			"request": {
+				"url": "localhost:8081/adduser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"New Name\",\"address\":\"Seattle, US\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "edit-user",
+			"request": {
+				"url": "localhost:8081/editUser",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"name\" : \"New Name\"}, {\"name\" : \"Name_Upd\", \"address\" : \"Address_Upd\"}]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete-user",
+			"request": {
+				"url": "localhost:8081/deleteUser/John",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
